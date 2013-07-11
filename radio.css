@@ -1,0 +1,3 @@
+span.my_radio { background:url(radio.png) 0px 0px no-repeat; }
+span.my_radio_active { background:url(radio_active.png) 0px 0px no-repeat; }
+span.my_radio_disabled { background:url(radio_disabled.png) 0px 0px no-repeat; }

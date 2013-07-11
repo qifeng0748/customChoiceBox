@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>自定义单选多选框</title>
+	<link rel="stylesheet" href="radio.css">
+	<link rel="stylesheet" href="checkbox.css">
+	<style type="text/css">
+		input { margin: 0; padding: 0; }
+		.my_radio, .my_check { width: 12px; height: 12px; display: inline-block; zoom: 1; *display: inline; }
+		.focus { outline: 1px dashed #34538b;}
+		.wrap { width: 90px; height: 16px; }
+	</style>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="jquery.CustomChoiceBox.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var ccb = new CustomChoiceBox({
+			wrapper: $('#forms'),
+			radio: {className: 'my_radio', checkedClass: 'my_radio_active', disabledClass: 'my_radio_disabled'},
+			checkbox: {className: 'my_check', checkedClass: 'my_check_active', disabledClass: 'my_check_disabled'}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="forms">
+		<form action="http://localhost">
+			<input type="radio" name="sex" class="radio" id="nan" checked="checked"><label for="nan">男</label>
+			<input type="radio" name="sex" class="radio" id="nv"><label for="nv">女</label><br>
+			<input type="radio" name="city" class="radio" id="bj"><label for="bj" id="lbj">北京</label>
+			<input type="radio" name="city" class="radio" checked="checked" id="gzh"><label for="gzh">广州</label>
+			<input type="radio" name="city" class="radio" id="shh"><label for="shh">上海</label><br>
+			<input type="checkbox" name="yy" class="checkbox" checked="checked" id="yy"><label for="yy">游泳</label>
+			<input type="checkbox" name="lq" class="checkbox" id="lq" disabled="disabled"><label for="lq">篮球</label>
+			<input type="checkbox" name="zq" class="checkbox" id="zq"><label for="zq">足球</label>
+			<input type="checkbox" name="ymq" class="checkbox" id="ymq"><label for="ymq">羽毛球</label>
+		</form>
+	</div>
+</body>
+</html>
